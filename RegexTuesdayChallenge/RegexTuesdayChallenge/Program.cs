@@ -44,28 +44,28 @@ namespace RegexTuesdayChallenge
 
 
             
-            Console.WriteLine("Task_3:");
-            /// Select dates between 1000 and 2012. Each month have 30 days.
-            /// Pattarn pass all test:
-            /// http://callumacrae.github.io/regex-tuesday/challenge3.html
-            /// Pattern:/^(1\d{3}|20(0\d|1[0-2]))/(0[1-9]|1[02])/(0[1-9]|[1-2]\d|30) (([0-1]\d|2[0-4]):[0-5]\d)(:[0-5]\d|60)?$/
-            FindMatches(text,
-            @"\b(1\d{3}|20(0\d|1[0-2]))/(0[1-9]|1[02])/(0[1-9]|[1-2]\d|30) (([0-1]\d|2[0-4]):[0-5]\d)(:[0-5]\d|60)?\b");
+            //Console.WriteLine("Task_3:");
+            ///// Select dates between 1000 and 2012. Each month have 30 days.
+            ///// Pattarn pass all test
+            ///// http://callumacrae.github.io/regex-tuesday/challenge3.html
+            ///// Pattern:/^(1\d{3}|20(0\d|1[0-2]))/(0[1-9]|1[02])/(0[1-9]|[1-2]\d|30) (([0-1]\d|2[0-4]):[0-5]\d)(:[0-5]\d|60)?$/
+            //FindMatches(text,
+            //@"\b(1\d{3}|20(0\d|1[0-2]))/(0[1-9]|1[02])/(0[1-9]|[1-2]\d|30) (([0-1]\d|2[0-4]):[0-5]\d)(:[0-5]\d|60)?\b");
 
             //Console.WriteLine("Task_4:");
             /////Change only *text* on tag <em>text</em>
             /////Test on sity, fall in all
             /////http://callumacrae.github.io/regex-tuesday/challenge4.html
-            //////\*([\w]+)\*/gi  <em>$1</em>
+            ////// /\*([A-Za-z0-9 ,.]+)\*/g  <em>$1</em>
             //FindAndChange(text,
             //   @"\*([A-Za-z0-9 ]+)\*",
             //   "<em>$1</em>");
 
-            //Console.WriteLine("Task_5:");
-            /////Find numbers divided by ",."  8,205,500.4672 
-            /////Test on sity 
-            /////https://callumacrae.github.com/regex-tuesday/challenge5.html
-            //FindMatches(text, @"\b\d{1,3}(,\d{3})+(.\d+)?\b");
+            Console.WriteLine("Task_5:");
+            //Find numbers divided by ",."  8,205,500.4672 
+            //Pattern:^\d{1,3}((,| )\d{3})*(.\d+)?$
+            //https://callumacrae.github.com/regex-tuesday/challenge5.html
+            FindMatches(text, @"\b\d{1,3}((,| )\d{3})*(.\d+)?\b");
 
             ////Console.WriteLine("Task_6:");
             ///////Find IPv4
