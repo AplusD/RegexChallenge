@@ -1,0 +1,6 @@
+C:\Users\ASUS\Documents\С# projects\RegexTuesdayChallenge\RegexTuesdayChallenge\bin\Debug\RegexTuesdayChallenge.exe.config
+C:\Users\ASUS\Documents\С# projects\RegexTuesdayChallenge\RegexTuesdayChallenge\bin\Debug\RegexTuesdayChallenge.exe
+C:\Users\ASUS\Documents\С# projects\RegexTuesdayChallenge\RegexTuesdayChallenge\bin\Debug\RegexTuesdayChallenge.pdb
+C:\Users\ASUS\Documents\С# projects\RegexTuesdayChallenge\RegexTuesdayChallenge\obj\Debug\RegexTuesdayChallenge.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Documents\С# projects\RegexTuesdayChallenge\RegexTuesdayChallenge\obj\Debug\RegexTuesdayChallenge.exe
+C:\Users\ASUS\Documents\С# projects\RegexTuesdayChallenge\RegexTuesdayChallenge\obj\Debug\RegexTuesdayChallenge.pdb
