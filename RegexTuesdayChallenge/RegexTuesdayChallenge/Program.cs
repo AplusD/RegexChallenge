@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 ///8/8/2016 
 ///Regex Tuesday Challenge 
 ///https://callumacrae.github.com/regex-tuesday/
-///Link on Habr
+///https://m.habrahabr.ru/post/167015/
 
 namespace RegexTuesdayChallenge
 {
