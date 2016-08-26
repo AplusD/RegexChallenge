@@ -42,11 +42,15 @@ namespace RegexTuesdayChallenge
                 "$1 <strong>$2</strong>");
 
             Console.WriteLine("Task_2:");
-            ///Choose grey colors in CSS 
+            ///Choose grayscale colors in CSS 
             ///http://callumacrae.github.io/regex-tuesday/challenge2.html
-            ///Pattern:
+            ///Pattern: /^((#([0-9a-z]?[0-9a-z])\3\3)|
+            //(rgb\((([0-1]?\d?\d|2[0-5][0-5]|0*(\d\.)?\d|\d\d%|100%),\s*0*\6,\s*0*\6)\)$)|
+            //(rgba\((([0-1]?\d?\d|2[0-5][0-5]|0*(\d\.)?\d|\d\d%|100%),\s*0*\10,\s*0*\10)(,(\d+\.)?\d+%?)\s?\))|
+            //(hsl\((\d?\d(\.\d\d?)?%?),\s*(\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)\))|
+            //(hsla\((\d?\d(\.\d\d?)?%?),\s*(\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)\)))$/i
             FindMatches(text,
-                @"");
+             @"((#([0-9a-z]?[0-9a-z])\3\3)|(rgb\((([0-1]?\d?\d|2[0-5][0-5]|0*(\d\.)?\d|\d\d%|100%),\s*0*\6,\s*0*\6)\)$)|(rgba\((([0-1]?\d?\d|2[0-5][0-5]|0*(\d\.)?\d|\d\d%|100%),\s*0*\10,\s*0*\10)(,(\d+\.)?\d+%?)\s?\))|(hsl\((\d?\d(\.\d\d?)?%?),\s*(\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)\))|(hsla\((\d?\d(\.\d\d?)?%?),\s*(\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)\)))");
 
             Console.WriteLine("Task_3:");
             /// Select dates between 1000 and 2012. Each month have 30 days.
@@ -73,25 +77,41 @@ namespace RegexTuesdayChallenge
             ///Find IPv4 
             ///Pattern:
             ///http://callumacrae.github.com/regex-tuesday/challenge6.html
-            FindMatches(text,
-                @"");
+            //FindMatches(text,
+            //    @"");
 
             Console.WriteLine("Task_7:");
             ///Find domains 
-            ///Pattern: /^(https|http)://(www\.)?[^-][\w-\.]{1,40}[^-.]\.\w{1,10}/?$/
+            ///Pattern: /^(https|http)://(www\.)?[^-][a-zA-Z-\.0-9]{1,40}[^-.]\.[A-Za-z]{1,10}/?$/
             ///https://callumacrae.github.com/regex-tuesday/challenge7.html
             FindMatches(text, @"\b(https|http)://(www\.)?[^-][\w-\.]{1,40}[^-.]\.\w{1,10}/?\b");
 
             Console.WriteLine("Task_8:");
             ///Repeated point mark with *text*
-            ///Pattern:
+            ///Pattern: /\* ([A-Za-z \*]*?)(\n)\* (\1)/gi
+            ///* $1$2* **$3**
             ///http://callumacrae.github.io/regex-tuesday/challenge8.html
             FindAndChange(text,
-                @"\b([a-zA-Z'.\- ]+)+\s(\1)+\b",
-                @"*$1*");
+                @"\b\* ([A-Za-z \*]*?)(\n)\* (\1)\b",
+                @"* $1$2* **$3***");
 
-       
-             
+            Console.WriteLine("Task_9:");
+            ///Change MarkDown to HTML
+            ///Pattern: /^\[([A-Za-z\s]*)\]\((http://[a-zA-Z-\.0-9]{1,40}\.[A-Za-z]{1,10}/?)\)$/g
+            ///<a href="$2">$1</a>
+            ///http://callumacrae.github.io/regex-tuesday/challenge9.html
+            FindAndChange(text,
+                @"\b\[([A-Za-z\s]*)\]\((http://[a-zA-Z-\.0-9]{1,40}\.[A-Za-z]{1,10}/?)\)\b",
+                @"<a href=""$2"">$1</a>");
+
+            Console.WriteLine("Task_10:");
+            ///Divide text on tockins 
+            ///Pattern: /(\s*|-{2,20})([A-Za-z]+)(\s|-{2,20}|;)/gi
+            ///$2,
+            ///http://callumacrae.github.io/regex-tuesday/challenge10.html
+            FindAndChange(text,
+                @"\b(\s*|-{2,20})([A-Za-z]+)(\s|-{2,20}|;)\b",
+                @"$2,");
 
         }
         public static void FindAndChange(String text, String pattern, String change)
