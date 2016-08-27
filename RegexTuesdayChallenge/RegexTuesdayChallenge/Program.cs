@@ -44,7 +44,7 @@ namespace RegexTuesdayChallenge
             Console.WriteLine("Task_2:");
             ///Choose grayscale colors in CSS 
             ///http://callumacrae.github.io/regex-tuesday/challenge2.html
-            ///Pattern: /^((#([0-9a-z]?[0-9a-z])\3\3)|
+            //Pattern: /^((#([0-9a-z]?[0-9a-z])\3\3)|
             //(rgb\((([0-1]?\d?\d|2[0-5][0-5]|0*(\d\.)?\d|\d\d%|100%),\s*0*\6,\s*0*\6)\)$)|
             //(rgba\((([0-1]?\d?\d|2[0-5][0-5]|0*(\d\.)?\d|\d\d%|100%),\s*0*\10,\s*0*\10)(,(\d+\.)?\d+%?)\s?\))|
             //(hsl\((\d?\d(\.\d\d?)?%?),\s*(\d?\d(\.\d\d?)?%?)(,\s*\d?\d(\.\d\d?)?%?)\))|
@@ -75,10 +75,10 @@ namespace RegexTuesdayChallenge
 
             Console.WriteLine("Task_6:");
             ///Find IPv4 
-            ///Pattern:
+            ///Pattern: /^(?:([0-1]?\d?\d|2[0-5][0-5]).?){3}\.?([0-1]?\d?\d|2[0-5][0-5])$/
             ///http://callumacrae.github.com/regex-tuesday/challenge6.html
-            //FindMatches(text,
-            //    @"");
+            FindMatches(text,
+            @"/^(?:([0-1]?\d?\d|2[0-5][0-5]).?){3}\.?([0-1]?\d?\d|2[0-5][0-5])$/");
 
             Console.WriteLine("Task_7:");
             ///Find domains 
